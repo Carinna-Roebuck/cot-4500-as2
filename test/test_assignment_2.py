@@ -15,14 +15,12 @@ def neville_interpolation(x, val, w):
             neville[i][j] = ((w - x[i + j]) * neville[i][j - 1] - (w - x[i]) * neville[i + 1][j - 1]) / (x[i] - x[i + j])
 
     # Final interpolated result
-    print(f"\nQuestion 1 Interpolated value at x = {w}: {neville[0][n - 1]:.16f}")
-
+    print(f"\nInterpolated value at x = {w}: {neville[0][n - 1]:.16f}")
 
 # Test Case 1 - Neville's Interpolation
 x_values = [1.0, 1.5, 2.0, 2.5]
 y_values = [2.7183, 4.4817, 7.3891, 12.1825]
 x_to_interpolate = 1.8
-
 # Compute interpolated value
 neville_interpolation(x_values, y_values, x_to_interpolate)
 
